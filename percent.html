@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+
+ <meta 
+ charset="UTF-8">
+<title>
+    Shopping Cart
+ </title>
+<meta 
+name="viewport"
+ content="width=device-width,
+  initial-scale=1.0">
+  </head>
+<style>
+img.one {
+  height: 30%;
+  width: 30%;}
+.third { width: 33.33%; float: left; } 
+.half { width: 50%; float: left; } 
+
+</style>
+<body 
+class="resumebody">
+<h1>
+    Shopping Cart 
+</h1>
+<div class="third">
+<img class = "one"
+ src="totebag.png"
+  alt="$18 - photo credit MoMA">
+  <label for= "mycart1"> $18</label>
+        <input id="mycart1" type="number"> <br></br>
+     <button type ="button" onclick="mycart()"> ADD TO CART </button>
+</div>
+<div class="third">
+<img class = "one"
+  src="tower.png"
+alt="MoMA De Stijl Tumbling Tower">
+ <p>
+<label for= "mycart2"> $50</label>
+        <input id="mycart2" type="number"> <br></br>
+     <button type ="button" onclick="mycart()"> ADD TO CART </button>
+ </div>
+ <div class="third">
+           <img class = "one"
+  src="Artsycat.png"
+alt="$16.99 Artsy Cat Calendar">
+<label for= "mycart3"> $16.99</label>
+        <input id="mycart3" type="number"> <br></br>
+     <button type ="button" onclick="mycart()"> ADD TO CART </button>
+ <h2 id = "demo">  </h2>
+   </div>   
+   <div class = "half">
+
+
+  <p>
+    <h1> Challenge 1</h1>
+     Find a  10% discount of your cart. 
+      Type your answer here to check if it matches.
+     <input id="myc1" type="number"> <br></br>
+     <button type ="button" onclick="mychallenge1()"> CHECK MY ANSWER </button>
+         <h3 id = "demo1"> </h3>
+   </div>
+  </p>
+
+
+        <script>
+            function mycart() {
+                var x = document.getElementById("mycart1").value;
+                var y = document.getElementById("mycart2").value;
+                 var z = document.getElementById("mycart3").value;
+                let text = "";
+                let total = (x*18 + y*50 + z*16.99);
+                text = "cart total: $" + total.toFixed(2);
+                document.getElementById("demo").innerHTML=text;
+            }
+
+           async function mychallenge1() {
+            var a = document.getElementById("mycart1").value;
+                var b = document.getElementById("mycart2").value;
+                 var c = document.getElementById("mycart3").value;
+                let text = ""
+                let total1 = ((a*18 + b*50 + c*16.99) - (a*18 + b*50 + c*16.99)*0.10) ;
+                text = "Check my answer"  + total1.toFixed(2);
+                document.getElementById("demo1").innerHTML=text;
+            }
+            </script>
+            <p>
+    Haley Horton Copyright &#169;
+     2025
+    </p>
+
+</body>
+</html>
