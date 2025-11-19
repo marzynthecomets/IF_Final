@@ -53,6 +53,9 @@ alt="$16.99 Artsy Cat Calendar">
    </div>   
    <div class = "half">
 
+<label for= "10percent"> Find 10% of your cart</label>
+     <button type ="button" onclick="mypercent()"> Find Percent </button>
+ <h2 id = "demo2">  </h2>
 
   <p>
     <h1> Challenge 1</h1>
@@ -76,13 +79,23 @@ alt="$16.99 Artsy Cat Calendar">
                 document.getElementById("demo").innerHTML=text;
             }
 
-           async function mychallenge1() {
+        function mypercent() {
+            var a = document.getElementById("mycart1").value;
+                var b = document.getElementById("mycart2").value;
+                 var c = document.getElementById("mycart3").value;
+                let text = ""
+                let total2 = ( (a*18 + b*50 + c*16.99)*0.10) ;
+                text =  total2.toFixed(2);
+                document.getElementById("demo2").innerHTML=text;
+            }
+
+             function mychallenge1() {
             var a = document.getElementById("mycart1").value;
                 var b = document.getElementById("mycart2").value;
                  var c = document.getElementById("mycart3").value;
                 let text = ""
                 let total1 = ((a*18 + b*50 + c*16.99) - (a*18 + b*50 + c*16.99)*0.10) ;
-                text = "Check my answer"  + total1.toFixed(2);
+                text = total1.toFixed(2);
                 document.getElementById("demo1").innerHTML=text;
             }
             </script>
