@@ -6,6 +6,29 @@
             <title>About Piet Mondrian</title>
         </head>
         <body>
+
+            <script>
+                async function GetArt (event, id) {
+                    event.preventDefault();
+                    var url = `https://api.moma.org/api/artists/${id}?token=202d9d02-ede9-49a8-9ebb-4aa5bd3f0000`
+                    var response = await fetch(url);
+                    var jsonData = await response.json();
+                    DisplayPainting(jsonData)
+                }
+
+                function DisplayPainting (artist) {
+                    var randomondrian = `
+                    <h1>${artist.objects[7].title}</h1>
+                    <img src="${artist.objects[7].thumbnail}">
+                    <p>${artist.objects[7].medium}</p>
+                    <p>${artist.objects[7].dated}</p>
+                    <p>${artist.objects[7].creditLine}</p>
+                    `
+                    document.getElementById("displayhere").innerHTML = randomondrian;
+                }
+
+            </script>
+
             <div class="header">
                 <h1>About Piet Mondrian</h1>
                 <h2>Learn about the iconic Dutch painter and how his work brings math and music to colorful life.</h2>
@@ -23,13 +46,18 @@
             <div class="maincontent">
                 <p>Pieter Cornelis Mondriaan, known as Pieter Mondrian, was born in 1872 in Amersfoort, a city in the province of Utrecht in the Netherlands.<sup><a href="#source1">1</a></sup>  He grew up drawing as a child. His father was a draftsman and headmaster of a local school, and his uncle was a landscape painter in the Hague school.<sup>2</sup></p>
                 <p>Although mostly well-known for his colorful abstract paintings, Mondrian did not become an abstract painter until his 40's.<sup>3</sup> Like his uncle, he studied how to paint landscapes in the Hague school style.</p>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             </div>
+            <div>
+                <h2>Check out some of Mondrian's work!</h2>
+                <div id="displayhere"></div>
+                <a href="" onclick="GetArt(event, 4057)"><button>Shuffle!</button></a>
+            </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <div class="sources">
                 <h3>Sources Cited</h3>
                 <p>
