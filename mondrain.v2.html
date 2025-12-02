@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)file:///Users/haleyhorton/Desktop/Files%20for%20ITClass%20/mondrain1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+            
+            <meta name="viewport" content="width=device-width">
+            <style>
+                #pictureframe {
+                    display: flex;
+                    flex-direction: row;
+                    width: 869px;
+                    height: 631px;
+                }
+                #column1 {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    width: 50%;
+                }
+                #block1 {
+                    background-color: red;
+                    border-color: black;
+                    border-style: solid;
+                    height: 60%;
+                }
+                #block2 {
+                    border-color: black;
+                    border-style: solid;
+                    height: 40%;
+                }
+                #column2 {
+                    height: 100%;
+                    width: 10%;
+                }
+                #block3 {
+                    border-color: black;
+                    border-style: solid;
+                    height: 10%;
+                    width: 100%;
+                    background-color: yellow;
+                }
+                #block4 {
+                    border-color: black;
+                    border-style: solid;
+                    height: 50%;
+                    width: 100%;
+                }
+                #block5 {
+                    border-color: black;
+                    border-style: solid;
+                    height: 40%;
+                    width: 100%;
+                    background-color: blue;
+                }
+                #column3 {
+                    height: 100%;
+                    width: 40%;
+                }
+                #section1 {
+                    height: 50%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                }
+                #thicc {
+                    width: 80%;
+                    height: 100%;
+                }
+                #block6 {
+                    border-color: black;
+                    border-style: solid;
+                    width: 100%;
+                    height: 80%;
+                }
+                #block7 {
+                    border-color: black;
+                    border-style: solid;
+                    width: 100%;
+                    height: 20%;
+                    background-color: blue;
+                }
+                #thin {
+                    width: 20%;
+                    height: 100%;
+                }
+                #block8 {
+                    border-color: black;
+                    border-style: solid;
+                    width: 100%;
+                    height: 25%;
+                    background-color: red;
+                }
+                #block9 {
+                    border-color: black;
+                    border-style: solid;
+                    width: 100%;
+                    height: 75%;
+                }
+                #section2 {
+                    height: 50%;
+                    width: 100%;
+                }
+                #block10 {
+                    border-color: black;
+                    border-style: solid;
+                    height: 100%;
+                    background-color: yellow;
+;
+                }
+                p {
+                    text-align: center;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Piet Mondrian</h1>
+            <div id="pictureframe">
+                <div id="column1">
+                    <div id="block1">
+                        <p>1+1=</p>
+                    </div>
+                    <div id="block2">
+                        <p>2+2=</p>
+                    </div>
+                </div>
+                <div id="column2">
+                    <div id="block3">
+                        <p>3+3=</p>
+                    </div>
+                    <div id="block4">
+                        <p>4+4=</p>
+                    </div>
+                    <div id="block5">
+                        <p>5+5=</p>
+                    </div>
+                </div>
+                <div id="column3">
+                    <div id="section1">
+                        <div id="thicc">
+                            <div id="block6">
+                                <p>6+6=</p>
+                            </div>
+                            <div id="block7">
+                                <p>7+7=</p>
+                            </div>
+                        </div>
+                        <div id="thin">
+                            <div id="block8">
+                                <p>8+8=</p>
+                            </div>
+                            <div id="block9">
+                                <p>9+9=</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="section2">
+                        <div id="block10">
+                             <p>1+0.5=</p>
+                           <input id="input1" type="number"> <br><br>
+                        <button type="button" onclick="prob11()"> Check Answer </button> 
+                            <h3 id="math">You did it!</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <script>
+    function prob11() {
+            var a = document.getElementById("input1").value;
+              let math1;
+              if (a == 1.5) {
+                math1 = "You did it!";
+              } else {
+                math1 = "aww shucks!" ;
+              }
+                document.getElementById("math").innerHTML= math1;
+            }
+
+    </script>
+        
+    
+
+     </body></html>
