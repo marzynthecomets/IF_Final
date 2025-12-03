@@ -165,7 +165,22 @@
                     </div>
                     <div id="section2">
                         <div id="block10">
-                            <p>Q10</p>
+                            <p>1+0.5=</p>
+                            <input id="input1" type="text"> <br></br>
+                            <button type ="button" onclick="prob10()"> Check Answer </button> 
+                            <h3 id = "math"> </h3>
+                                <script>
+                                function prob10() {
+                                        var a = document.getElementById("input1").value;
+                                        let math1;
+                                        if (a == "1/5") {
+                                            math1 = "You did it!";
+                                        } else {
+                                            math1 = "Aww, shucks!" ;
+                                        }
+                                        document.getElementById("math").innerHTML= math1;
+                                    } 
+                                </script>
                         </div>
                     </div>
                 </div>
