@@ -28,28 +28,28 @@ img {
     background-color: #1E138E;
     color: white;
     padding: 15px;
-    margin: 0px;
+    
 }
 
 #musicplayer {
     background-color: #D81000;
     color: white;
     padding: 15px;
-    0px;
+    
 }
 
 #shopping {
     background-color: #F6FF00;
     color: black;
     padding: 15px;
-    0px;
+   
 }
 
 #paintbynumbers {
     background-color: #1E138E;
     color: white;
     padding: 15px;
-    0px;
+   
 }
 
 /*PAINT BY NUMBERS BABY*/
@@ -58,7 +58,10 @@ img {
     display: flex;
     flex-direction: row;
 }
-
+#painterbody {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 #pictureframe {
                     display: flex;
                     flex-direction: row;
@@ -73,19 +76,21 @@ img {
                     flex-direction: column;
                     height: 100%;
                     width: 50%;
+                    
                 }
                 #block1 {
-                    display: flex;
-                    background-color: red;
+                    background-color: gray;
                     border-color: black;
                     border-style: solid;
                     height: 60%;
                     width: 100%;
+                    text-align: center;
                 }
                 #block2 {
                     border-color: black;
                     border-style: solid;
                     height: 40%;
+                    background-color: gray
                 }
                 #column2 {
                     display: flex;
@@ -98,26 +103,28 @@ img {
                     border-style: solid;
                     height: 10%;
                     width: 100%;
-                    background-color: yellow;
+                    background-color: gray;
                 }
                 #block4 {
                     border-color: black;
                     border-style: solid;
                     height: 50%;
                     width: 100%;
+                    background-color: gray
                 }
                 #block5 {
                     border-color: black;
                     border-style: solid;
                     height: 40%;
                     width: 100%;
-                    background-color: blue;
+                    background-color: gray;
                 }
                 #column3 {
                     display: flex;
                     flex-direction: column;
                     height: 100%;
                     width: 40%;
+                    
                 }
                 #section1 {
                     height: 50%;
@@ -134,13 +141,14 @@ img {
                     border-style: solid;
                     width: 100%;
                     height: 80%;
+                    background-color: gray
                 }
                 #block7 {
                     border-color: black;
                     border-style: solid;
                     width: 100%;
                     height: 20%;
-                    background-color: blue;
+                    background-color: gray;
                 }
                 #thin {
                     width: 20%;
@@ -151,13 +159,14 @@ img {
                     border-style: solid;
                     width: 100%;
                     height: 25%;
-                    background-color: red;
+                    background-color: gray;
                 }
                 #block9 {
                     border-color: black;
                     border-style: solid;
                     width: 100%;
                     height: 75%;
+                    background-color: gray
                 }
                 #section2 {
                     height: 50%;
@@ -168,10 +177,30 @@ img {
                     border-style: solid;
                     height: 100%;
                     background-color: gray;
+                    text-align: center;
                 }
 
-                .question {
+                .questions {
+                    display: flex;
+                    flex-direction: row;
                     text-align: left;
                     align-content: left;
                     padding-left: 25px;
                 }
+                .qset1 {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    align-content: left;
+                    padding-left: 25px;
+                }
+
+                .qset2 {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    align-content: left;
+                    padding-left: 25px;
+                }
+
+               

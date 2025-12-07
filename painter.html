@@ -8,7 +8,7 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
         </head>
-        <body>
+        <body id="painterbody">
             <div class="menu">
                 <button id="home" onclick="document.location='about.html'">About</button>
                 <button id="musicplayer" onclick="document.location='music.html'">Mondrian & Music</button>
@@ -20,67 +20,243 @@
             <div id="pictureframe">
                 <div id="column1">
                     <div id="block1">
-                        <p>Q1</p>
+                    <p>
+                         <b> Q1 </b></p>
                     </div>
                     <div id="block2">
-                        <p>Q2</p>
+                        <p><b> Q2 </b> </p>
                     </div>
                 </div>
                 <div id="column2">
                     <div id="block3">
-                        <p>Q3</p>
+                        <p><b> Q3 </b> </p>
                     </div>
                     <div id="block4">
-                        <p>Q4</p>
+                        <p><b>Q4 </b> </p>
                     </div>
                     <div id="block5">
-                        <p>Q5</p>
+                        <p> <b> Q5 </b> </p>
                     </div>
                 </div>
                 <div id="column3">
                     <div id="section1">
                         <div id="thicc">
                             <div id="block6">
-                                <p>Q6</p>
+                                <p> <b> Q6 </b> </p>
                             </div>
                             <div id="block7">
-                                <p>Q7</p>
+                                <p> <b> Q7 </b> </p>
                             </div>
                         </div>
                         <div id="thin">
                             <div id="block8">
-                                <p>Q8</p>
+                                <p> <b> Q8 </b> </p>
                             </div>
                             <div id="block9">
-                                <p>Q9</p>
+                                <p> <b> Q9 </b> </p>
                             </div>
                         </div>
                     </div>
                     <div id="section2">
                         <div id="block10">
-                            <p>Q10</p>
+                            <p> <b> Q10 </b> </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="question">
-                <div id="Q1">
-                    <p><b>Q1.</b> What is 1+0.5? Write as a fraction?</p>
-                    <input id="input1" type="text"> <br></br>
+            <!--Questions-->
+            <div class="questions">
+                <div class="qset1">
+                
+                    <p><b>Q1.</b> What is <sup>1</sup>&frasl; <sub>5</sub> + <sup>2</sup>&frasl;<sub>5</sub>?</p>
+                    <input id="input1" type="text">
+                    <button type ="button" onclick="prob1()"> Check Answer </button> 
+                    <h3 id = "math1"> </h3>
+                
+                
+                    <p><b>Q2.</b> What is <sup>2</sup>&frasl; <sub>3</sub> + <sup>2</sup>&frasl;<sub>3</sub>?</p>
+                    <input id="input2" type="text">
+                    <button type ="button" onclick="prob2()"> Check Answer </button> 
+                    <h3 id = "math2"> </h3>
+            
+                    <p><b>Q3.</b> What is <sup>1</sup>&frasl; <sub>10</sub> + <sup>8</sup>&frasl;<sub>10</sub>?</p>
+                    <input id="input3" type="text"> 
+                    <button type ="button" onclick="prob3()"> Check Answer </button> 
+                    <h3 id = "math3"> </h3>
+
+                
+                    <p><b>Q4.</b> What is <sup>7</sup>&frasl; <sub>10</sub> + <sup>8</sup>&frasl;<sub>10</sub>?</p>
+                    <input id="input4" type="text"> 
+                    <button type ="button" onclick="prob4()"> Check Answer </button> 
+                    <h3 id = "math4"> </h3>
+
+                    
+                    <p>
+                        <b>Q5.</b> What is <sup>3</sup>&frasl; <sub>7</sub> + <sup>2</sup>&frasl;<sub>7</sub>?</p>
+                    <input id="input5" type="text"> 
+                    <button type ="button" onclick="prob5()"> Check Answer </button> 
+                    <h3 id = "math5"> </h3>
+                </div>
+                <div class="qset2">
+                    <p><b>Q6.</b> What is <sup>6</sup>&frasl; <sub>13</sub> + <sup>2</sup>&frasl;<sub>13</sub>?</p>
+                    <input id="input6" type="text"> 
+                    <button type ="button" onclick="prob6()"> Check Answer </button> 
+                    <h3 id = "math6"> </h3>
+
+                    <p><b>Q7.</b> What is <sup>2</sup>&frasl; <sub>9</sub> + <sup>3</sup>&frasl;<sub>9</sub>?</p>
+                    <input id="input7" type="text"> 
+                    <button type ="button" onclick="prob7()"> Check Answer </button> 
+                    <h3 id = "math7"> </h3>
+
+                    <p><b>Q8.</b> What is <sup>1</sup>&frasl; <sub>4</sub> + <sup>1</sup>&frasl;<sub>2</sub>?</p>
+                    <input id="input8" type="text"> 
+                    <button type ="button" onclick="prob8()"> Check Answer </button> 
+                    <h3 id = "math8"> </h3>
+
+                    <p>
+                        <b>Q9.</b> 
+                        What is <sup>2</sup>&frasl; <sub>3</sub> + <sup>1</sup>&frasl;<sub>4</sub>?
+                    </p>
+                    <input id="input9" type="text"> 
+                    <button type ="button" onclick="prob9()"> Check Answer </button> 
+                    <h3 id = "math9"> </h3>
+
+
+ <p><b>Q10.</b> What is <sup>4</sup>&frasl; <sub>11</sub> + <sup>2</sup>&frasl;<sub>11</sub>?</p>
+                    <input id="input10" type="text"> 
                     <button type ="button" onclick="prob10()"> Check Answer </button> 
-                    <h3 id = "math"> </h3>
+                    <h3 id = "math10"> </h3>
+
+                </div>
+                </div>
+                </div>
+            </div>
                                 <script>
-                                function prob10() {
+                                function prob1() {
                                         var a = document.getElementById("input1").value;
-                                        let math1;
-                                        if (a == "1/5") {
-                                            math1 = "You did it!";
+                                        let m1;
+                                        if (a == "3/5") {
+                                            m1 = "You did it!";
+                                            document.getElementById("block1").style.backgroundColor= "red"
+                                        } else {
+                                            m1 = "Aww, shucks!" ;
+                                            document.getElementById("block1").style.backgroundColor= "gray"
+                                        }
+                                        document.getElementById("math1").innerHTML= m1;
+                                    } 
+                    
+                                     function prob2() {
+                                        var a = document.getElementById("input2").value;
+                                        let m2;
+                                        if (a == "4/3") {
+                                            m2 = "You did it!";
+                                            document.getElementById("block2").style.backgroundColor= "white"
+                                        } else {
+                                            m2 = "Aww, shucks!" ;
+                                            document.getElementById("block2").style.backgroundColor= "gray"
+                                        }
+                                        document.getElementById("math2").innerHTML= m2;
+                                    } 
+
+                         function prob3() {
+                                        var a = document.getElementById("input3").value;
+                                        let m3;
+                                        if (a == "9/10") {
+                                            m3 = "You did it!";
+                                            document.getElementById("block3").style.backgroundColor= "yellow"
+                                        } else {
+                                            m3 = "Aww, shucks!" ;
+                                            document.getElementById("block3").style.backgroundColor= "gray"
+                                        }
+                                        document.getElementById("math3").innerHTML= m3;
+                                    } 
+
+                        function prob4() {
+                                        var a = document.getElementById("input4").value;
+                                        let m4;
+                                        if (a == "15/10") {
+                                            m4 = "You did it!";
+                                            document.getElementById("block4").style.backgroundColor= "white"
+                                        } else {
+                                            m4 = "Aww, shucks!" ;
+                                            document.getElementById("block4").style.backgroundColor= "gray"
+                                        }
+                                        document.getElementById("math4").innerHTML= m4;
+                                    } 
+
+                        function prob5() {
+                                        var a = document.getElementById("input5").value;
+                                        let m5;
+                                        if (a == "5/7") {
+                                            m5 = "You did it!";
+                                            document.getElementById("block5").style.backgroundColor= "blue"
+                                        } else {
+                                            m5 = "Aww, shucks!" ;
+                                            document.getElementById("block5").style.backgroundColor= "gray"
+                                        }
+                                        document.getElementById("math5").innerHTML= m5;
+                                    } 
+            function prob6() {
+                                        var a = document.getElementById("input6").value;
+                                        let m6;
+                                        if (a == "3/5") {
+                                            m6 = "You did it!";
+                                            document.getElementById("block6").style.backgroundColor= "white"
+                                        } else {
+                                            m6 = "Aww, shucks!" ;
+                                            document.getElementById("block6").style.backgroundColor= "gray"
+                                        }
+                                        document.getElementById("math6").innerHTML= m6;
+                                    } 
+            function prob7() {
+                                        var a = document.getElementById("input7").value;
+                                        let m7;
+                                        if (a == "5/9") {
+                                            m7 = "You did it!";
+                                            document.getElementById("block7").style.backgroundColor= "blue"
+                                        } else {
+                                            m7 = "Aww, shucks!" ;
+                                            document.getElementById("block7").style.backgroundColor= "gray"
+                                        }
+                                        document.getElementById("math7").innerHTML= m7;
+                                    } 
+
+            function prob8() {
+                                        var a = document.getElementById("input8").value;
+                                        let m8;
+                                        if (a == "3/4") {
+                                            m8 = "You did it!";
+                                            document.getElementById("block8").style.backgroundColor= "red"
+                                        } else {
+                                            m8 = "Aww, shucks!" ;
+                                            document.getElementById("block8").style.backgroundColor= "gray"
+                                        }
+                                        document.getElementById("math8").innerHTML= m8;
+                                    } 
+
+        function prob9() {
+                                        var a = document.getElementById("input9").value;
+                                        let m9;
+                                        if (a == "7/12") {
+                                            m9 = "You did it!";
+                                            document.getElementById("block9").style.backgroundColor= "white"
+                                        } else {
+                                            m9 = "Aww, shucks!" ;
+                                            document.getElementById("block9").style.backgroundColor= "gray"
+                                        }
+                                        document.getElementById("math9").innerHTML= m9;
+                                    } 
+        function prob10() {
+                                        var a = document.getElementById("input10").value;
+                                        let m10;
+                                        if (a == "6/11") {
+                                            m10 = "You did it!";
                                             document.getElementById("block10").style.backgroundColor= "yellow"
                                         } else {
-                                            math1 = "Aww, shucks!" ;
+                                            m10 = "Aww, shucks!" ;
                                             document.getElementById("block10").style.backgroundColor= "gray"
                                         }
-                                        document.getElementById("math").innerHTML= math1;
+                                        document.getElementById("math10").innerHTML= m10;
                                     } 
                                 </script>
                 </div>
