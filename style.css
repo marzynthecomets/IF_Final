@@ -203,4 +203,48 @@ img {
                     padding-left: 25px;
                 }
 
+/*SHOPPING*/
+#experience {
+    display: flex;
+    flex-direction: row;
+}
+
+.product { 
+    display: inline-flex;
+    border-style: solid;
+    padding: 20px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 300px;
+    height: 450px;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.prodimage {
+    width: 250px;
+}
+
+.addtocart {
+    background-color: blue;
+    color: white;
+    font-family: "DM Sans", Helvetica, sans-serif;
+    padding: 10px;
+    border: none;
+}
+
+.amount {
+    padding: 10px;
+}
+
+#cart {
+    background-color: yellow;
+    color: black;
+    border-style: solid;
+    width: 400px;
+}
+
                
