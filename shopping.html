@@ -30,54 +30,161 @@ name="viewport"
       <img class="prodimage" src="shoppingitems/tumbling.png">
       <h3>MoMA De Stijl Tumbling Tower</h3>
       <h4>$58</h4>
-      <input class="amount" id="mycart" type="number">
-      <button class="addtocart" type ="button" onclick="mycart()"> ADD TO CART </button>
+      <input class="amount" id="mycart1" type="number">
+      <button class="addtocart" type ="button" onclick="mycart()"> ADD TO CART </button> 
     </div>
+
+
     <div class="product">
       <img class="prodimage" src="shoppingitems/clock.png">
       <h3>De Stijl Wall Clock</h3>
       <h4>$89</h4>
-      <input class="amount" id="mycart" type="number">
-      <button class="addtocart" type ="button" onclick="mycart()"> ADD TO CART </button>
+            <label for= "mycart2"> </label>
+      <input class="amount" id="mycart2" type="number">
+      <button class="addtocart"  type ="button" onclick="mycart()"> ADD TO CART </button>
     </div>
+
     <div class="product">
       <img  class="prodimage" src="shoppingitems/tower.png">
       <h3>De Stijl Storage Tower</h3>
       <h4>$58</h4>
-      <input class="amount" id="mycart" type="number">
+      <label for= "mycart3"> </label>
+      <input class="amount" id="mycart3" type="number">
       <button class="addtocart" type ="button" onclick="mycart()"> ADD TO CART </button>
     </div>
+ 
     <div class="product">
       <img class="prodimage" src="shoppingitems/bunny.png">
       <h3>Miffy and Friends Crochet Mondrian Plush Toy</h3>
       <h4>$42</h4>
-      <input class="amount" id="mycart" type="number">
+      <label for= "mycart4"> </label>
+      <input class="amount" id="mycart4" type="number">
       <button class="addtocart" type ="button" onclick="mycart()"> ADD TO CART </button>
+   
     </div>
     <div class="product">
     <img class="prodimage" src="shoppingitems/mug.png">
     <h3>Mondrian Color-Changing Mug</h3>
     <h4>$26</h4>
-    <input class="amount" id="mycart" type="number">
+
+    <label for= "mycart5"> </label>
+    <input class="amount" id="mycart5" type="number">
     <button class="addtocart" type ="button" onclick="mycart()"> ADD TO CART </button>
     </div>
     <div class="product">
     <img class="prodimage" src="shoppingitems/scarf.png">
     <h3>Mondrian: Trafalgar Scarf</h3>
     <h4>$55</h4>
-    <input class="amount" id="mycart" type="number">
+    <label for= "mycart6"> </label>
+    <input class="amount" id="mycart6" type="number">
     <button class="addtocart" type ="button" onclick="mycart()"> ADD TO CART </button>
     </div>
   </div>
   <div id="cart">
-  <p>cart goes here lmao</p>
+  <p>
+  <p style ="font-size:50px"> &#128722;  </p>
+ 
   <br>
-  <p>cart goes here lmao</p>
+  <p> <h2 id = "demo"> </h2> </p></p>
   <br>
-  <p>cart goes here lmao</p>
-  <br>
-  <p>cart goes here lmao</p>
+  <div id="demos">
+  <h2> 1. Find 10% of your cart</h2>
+
+ <input id="input1" type="number"> <br></br>
+     <button type ="button" onclick="checkDiscount()"> Check MY Answer </button>
+<h2 id = "demo3">  </h2>
+  <h3> (Reveal Answer to 10%)</h3>
+     <button type ="button" onclick="mypercent()"> SHOW 10% </button>
+<br>
+<br>
+ <h2 id = "demo2">  </h2>
+  <p>
+    <h2> 2. Now, find a  10% discount of your cart. Hint: to do this, find your total - 10%. </h2>
+      Type your answer here to check if it matches.
+    
+      <input id="input3" type="number"> <br></br>
+     <button type ="button" onclick="mychallenge1()"> SHOW ANSWER </button>
+         <h3 id = "demo1"> </h3>
+   </div>
+  </p>
+  </div>
   </div>
 </div>
+<div>
+            <p>
+    Haley Horton Copyright &#169;
+     2025
+     </div>
+    </p>
+
+        <script>
+          function cartTotal() {
+             var a = document.getElementById("mycart1").value;
+                var b = document.getElementById("mycart2").value;
+                 var c = document.getElementById("mycart3").value;
+                 var d = document.getElementById("mycart4").value;
+                 var e = document.getElementById("mycart5").value;
+                 var f = document.getElementById("mycart6").value;
+                let text = "";
+                let total = (a*58 + b*89 + c*58+d*42+e*26 +f*55);
+                return total;
+          }
+            function mycart() {
+                let total = cartTotal()
+                text = "cart total: $" + total.toFixed(2);
+                document.getElementById("demo").innerHTML=text;
+            }
+        
+           
+            function checkDiscount() {
+              var a = document.getElementById("mycart1").value;
+                var b = document.getElementById("mycart2").value;
+                 var c = document.getElementById("mycart3").value;
+                 var d = document.getElementById("mycart4").value;
+                  var e = document.getElementById("mycart5").value;
+                 var f = document.getElementById("mycart6").value;
+              let g = document.getElementById("input1").value;
+              let input2;
+              if (g == (a*58 + b*89 + c*58+d*42+e*26 +f*55)*0.10) {
+                 input2 = "You did it!";
+              } else {
+                 input2 = "If at first you don't succeed, try try again";
+              }
+                document.getElementById("demo3").innerHTML=input2;
+            }
+
+            function mypercent() {
+            var a = document.getElementById("mycart1").value;
+                var b = document.getElementById("mycart2").value;
+                 var c = document.getElementById("mycart3").value;
+                 var d = document.getElementById("mycart4").value;
+                  var e = document.getElementById("mycart5").value;
+                 var f = document.getElementById("mycart6").value;
+                let text1 = "";
+                let total2 = ( (a*58 + b*89 + c*58+d*42+e*26 +f*55)*0.10) ;
+                text1 =  total2.toFixed(2);
+                document.getElementById("demo2").innerHTML=text1;
+                 }
+
+             function mychallenge1() {
+            var a = document.getElementById("mycart1").value;
+                var b = document.getElementById("mycart2").value;
+                 var c = document.getElementById("mycart3").value;
+                 var d = document.getElementById("mycart4").value;
+                  var e = document.getElementById("mycart5").value;
+                 var f = document.getElementById("mycart6").value;
+                 var h = document.getElementById("input3").value
+                let input3;
+                if (h == ((a*58 + b*89 + c*58+d*42+e*26 +f*55) - (a*58 + b*89 + c*58+d*42+e*26 +f*55)*0.10)){
+                input3 = "You did it!";
+                } else {
+                  input3= "If at first you don't succeed, try, try again"
+                }
+                document.getElementById("demo1").innerHTML=input3;
+            }
+             
+            
+
+</script>
 </body>
 </html>
