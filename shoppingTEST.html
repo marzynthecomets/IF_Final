@@ -31,7 +31,7 @@ name="viewport"
       <h3>MoMA De Stijl Tumbling Tower</h3>
       <h4>$58</h4>
       <input class="amount" id="mycart1" type="number">
-      <button class="addtocart" type ="button" onclick="cartTotal()"> ADD TO CART </button> 
+      <button class="addtocart" type ="button" onclick="mycart()"> ADD TO CART </button> 
     </div>
 
 
@@ -39,9 +39,9 @@ name="viewport"
       <img class="prodimage" src="shoppingitems/clock.png">
       <h3>De Stijl Wall Clock</h3>
       <h4>$89</h4>
-
-      <input  id="mycart2" type="number">
-      <button  type ="button" onclick="cartTotal()"> ADD TO CART </button>
+            <label for= "mycart2"> </label>
+      <input class="amount" id="mycart2" type="number">
+      <button  type ="button" onclick="mycart()"> ADD TO CART </button>
     </div>
 
     <div class="product">
@@ -50,23 +50,26 @@ name="viewport"
       <h4>$58</h4>
       <label for= "mycart3"> </label>
       <input class="amount" id="mycart3" type="number">
-      <button class="addtocart" type ="button" onclick="cartTotal()"> ADD TO CART </button>
+      <button class="addtocart" type ="button" onclick="mycart()"> ADD TO CART </button>
     </div>
+ 
     <div class="product">
       <img class="prodimage" src="shoppingitems/bunny.png">
       <h3>Miffy and Friends Crochet Mondrian Plush Toy</h3>
       <h4>$42</h4>
       <label for= "mycart4"> </label>
       <input class="amount" id="mycart4" type="number">
-      <button class="addtocart" type ="button" onclick="cartTotal()"> ADD TO CART </button>
+      <button class="addtocart" type ="button" onclick="mycart()"> ADD TO CART </button>
+   
     </div>
     <div class="product">
     <img class="prodimage" src="shoppingitems/mug.png">
     <h3>Mondrian Color-Changing Mug</h3>
     <h4>$26</h4>
+
     <label for= "mycart5"> </label>
     <input class="amount" id="mycart5" type="number">
-    <button class="addtocart" type ="button" onclick="cartTotal()"> ADD TO CART </button>
+    <button class="addtocart" type ="button" onclick="mycart()"> ADD TO CART </button>
     </div>
     <div class="product">
     <img class="prodimage" src="shoppingitems/scarf.png">
@@ -123,7 +126,7 @@ name="viewport"
                  var e = document.getElementById("mycart5").value;
                  var f = document.getElementById("mycart6").value;
                 let text = "";
-                let total = (x*18 + y*50 + z*16.99+d*42+e*89 +f*5.95);
+                let total = (x*58 + y*58 + z*16.99+d*42+e*89 +f*5.95);
                 return total;
           }
             function mycart() {
@@ -142,7 +145,7 @@ name="viewport"
                  var f = document.getElementById("mycart6").value;
               let g = document.getElementById("input1").value;
               let input2;
-              if (g == ((a*18 + b*50 + c*16.99 + d*42 + e*89 +f*5.95)*0.10)) {
+              if (g == ((a*58 + b*58 + c*16.99 + d*42 + e*89 +f*5.95)*0.10)) {
                  input2 = "You did it!";
               } else {
                  input2 = "If at first you don't succeed, try try again";
@@ -158,7 +161,7 @@ name="viewport"
                   var e = document.getElementById("mycart5").value;
                  var f = document.getElementById("mycart6").value;
                 let text1 = "";
-                let total2 = ( (a*18 + b*50 + c*16.99+d*42+e*89 +f*5.95)*0.10) ;
+                let total2 = ( (a*58 + b*58 + c*16.99+d*42+e*89 +f*5.95)*0.10) ;
                 text1 =  total2.toFixed(2);
                 document.getElementById("demo2").innerHTML=text1;
                  }
