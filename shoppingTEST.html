@@ -119,14 +119,14 @@ name="viewport"
 
         <script>
           function cartTotal() {
-             var x = document.getElementById("mycart1").value;
-                var y = document.getElementById("mycart2").value;
-                 var z = document.getElementById("mycart3").value;
+             var a = document.getElementById("mycart1").value;
+                var b = document.getElementById("mycart2").value;
+                 var c = document.getElementById("mycart3").value;
                  var d = document.getElementById("mycart4").value;
                  var e = document.getElementById("mycart5").value;
                  var f = document.getElementById("mycart6").value;
                 let text = "";
-                let total = (x*58 + y*89 + z*58+d*42+e*26 +f*55);
+                let total = (a*58 + b*89 + c*58+d*42+e*26 +f*55);
                 return total;
           }
             function mycart() {
@@ -145,7 +145,7 @@ name="viewport"
                  var f = document.getElementById("mycart6").value;
               let g = document.getElementById("input1").value;
               let input2;
-              if (g == (x*58 + y*89 + z*58+d*42+e*26 +f*55)*0.10) {
+              if (g == (a*58 + b*89 + c*58+d*42+e*26 +f*55)*0.10) {
                  input2 = "You did it!";
               } else {
                  input2 = "If at first you don't succeed, try try again";
@@ -161,7 +161,7 @@ name="viewport"
                   var e = document.getElementById("mycart5").value;
                  var f = document.getElementById("mycart6").value;
                 let text1 = "";
-                let total2 = ( (x*58 + y*89 + z*58+d*42+e*26 +f*55)*0.10) ;
+                let total2 = ( (a*58 + b*89 + c*58+d*42+e*26 +f*55)*0.10) ;
                 text1 =  total2.toFixed(2);
                 document.getElementById("demo2").innerHTML=text1;
                  }
@@ -175,7 +175,7 @@ name="viewport"
                  var f = document.getElementById("mycart6").value;
                  var h = document.getElementById("input3").value
                 let input3;
-                if (h == ((x*58 + y*89 + z*58+d*42+e*26 +f*55) - (x*58 + y*89 + z*58+d*42+e*26 +f*55)*0.10)){
+                if (h == ((a*58 + b*89 + c*58+d*42+e*26 +f*55) - (a*58 + b*89 + c*58+d*42+e*26 +f*55)*0.10)){
                 input3 = "You did it!";
                 } else {
                   input3= "If at first you don't succeed, try, try again"
