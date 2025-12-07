@@ -51,6 +51,16 @@ h6 {
    
 }
 
+/*SHUFFLER*/
+#shuffler {
+    border-style: solid;
+    text-decoration: none;
+    padding: 12px;
+    margin: 20px;
+    background-color: blue;
+    color: white;
+}
+
 /*PAINT BY NUMBERS BABY*/
 
 #painter {
