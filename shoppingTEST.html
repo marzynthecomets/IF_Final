@@ -41,7 +41,7 @@ name="viewport"
       <h4>$89</h4>
             <label for= "mycart2"> </label>
       <input class="amount" id="mycart2" type="number">
-      <button  type ="button" onclick="mycart()"> ADD TO CART </button>
+      <button class="addtocart"  type ="button" onclick="mycart()"> ADD TO CART </button>
     </div>
 
     <div class="product">
@@ -126,7 +126,7 @@ name="viewport"
                  var e = document.getElementById("mycart5").value;
                  var f = document.getElementById("mycart6").value;
                 let text = "";
-                let total = (x*58 + y*58 + z*16.99+d*42+e*89 +f*5.95);
+                let total = (x*58 + y*89 + z*58+d*42+e*26 +f*55);
                 return total;
           }
             function mycart() {
@@ -145,7 +145,7 @@ name="viewport"
                  var f = document.getElementById("mycart6").value;
               let g = document.getElementById("input1").value;
               let input2;
-              if (g == ((a*58 + b*58 + c*16.99 + d*42 + e*89 +f*5.95)*0.10)) {
+              if (g == (x*58 + y*89 + z*58+d*42+e*26 +f*55)*0.10) {
                  input2 = "You did it!";
               } else {
                  input2 = "If at first you don't succeed, try try again";
@@ -161,7 +161,7 @@ name="viewport"
                   var e = document.getElementById("mycart5").value;
                  var f = document.getElementById("mycart6").value;
                 let text1 = "";
-                let total2 = ( (a*58 + b*58 + c*16.99+d*42+e*89 +f*5.95)*0.10) ;
+                let total2 = ( (x*58 + y*89 + z*58+d*42+e*26 +f*55)*0.10) ;
                 text1 =  total2.toFixed(2);
                 document.getElementById("demo2").innerHTML=text1;
                  }
@@ -175,7 +175,7 @@ name="viewport"
                  var f = document.getElementById("mycart6").value;
                  var h = document.getElementById("input3").value
                 let input3;
-                if (h == ((a*18 + b*50 + c*16.99+d*42+e*89 +f*5.95) - (a*18 + b*50 + c*16.99+d*42+e*89 +f*5.95)*0.10)){
+                if (h == ((x*58 + y*89 + z*58+d*42+e*26 +f*55) - (x*58 + y*89 + z*58+d*42+e*26 +f*55)*0.10)){
                 input3 = "You did it!";
                 } else {
                   input3= "If at first you don't succeed, try, try again"
