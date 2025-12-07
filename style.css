@@ -244,6 +244,9 @@ h6 {
     color: black;
     border-style: solid;
     width: 400px;
+    padding: 20px;
 }
 
-               
+#demos {
+    text-align: left;
+}
