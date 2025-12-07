@@ -8,23 +8,36 @@
         <body>
 
             <script>
-                async function GetArt (event, id) {
+                function getRandomIndex(array) {
+
+                    return Math.floor(Math.random() * array.length); 
+                }
+                async function GetArt(event, id) {
                     event.preventDefault();
-                    var url = `https://api.moma.org/api/artists/${id}?token=202d9d02-ede9-49a8-9ebb-4aa5bd3f0000`
+                    var url = `https://api.moma.org/api/artists/${id}?token=202d9d02-ede9-49a8-9ebb-4aa5bd3f0000`;
                     var response = await fetch(url);
                     var jsonData = await response.json();
-                    DisplayPainting(jsonData)
+                    
+                    let randomIndex = getRandomIndex(jsonData.objects);
+                    let randomObject = jsonData.objects[randomIndex];
+                    
+                    while (randomObject.thumbnail == "") {
+                        randomIndex = getRandomIndex(jsonData.objects);
+                        randomObject = jsonData.objects[randomIndex];
+                    }
+                    
+                    DisplayPainting(randomObject);
                 }
 
-                function DisplayPainting (artist) {
-                    var randomondrian = `
-                    <h1>${artist.objects[7].title}</h1>
-                    <img src="${artist.objects[7].thumbnail}">
-                    <p>${artist.objects[7].medium}</p>
-                    <p>${artist.objects[7].dated}</p>
-                    <p>${artist.objects[7].creditLine}</p>
-                    `
-                    document.getElementById("displayhere").innerHTML = randomondrian;
+                function DisplayPainting(artwork) {
+                    var html = `
+                        <h1>${artwork.title}</h1>
+                        <img src="${artwork.thumbnail}">
+                        <p>${artwork.medium}</p>
+                        <p>${artwork.dated}</p>
+                        <p>${artwork.creditLine}</p>
+                    `;
+                    document.getElementById("displayhere").innerHTML = html;
                 }
 
             </script>
