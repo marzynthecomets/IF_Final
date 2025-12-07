@@ -1,0 +1,177 @@
+body {
+    font-family: "DM Sans", Helvetica, sans-serif;
+    align-content: center;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h1 {
+    font-family: "DM Mono", Helvetica, sans-serif;
+    color: #D81000;
+}
+
+h2,
+h3,
+h4 {
+    font-family: "DM Mono", Helvetica, sans-serif;
+    color: blue;
+}
+
+img {
+    width: 300px;
+}
+
+/*MENU, BON APPETIT*/
+
+#home {
+    background-color: #1E138E;
+    color: white;
+    padding: 15px;
+    margin: 0px;
+}
+
+#musicplayer {
+    background-color: #D81000;
+    color: white;
+    padding: 15px;
+    0px;
+}
+
+#shopping {
+    background-color: #F6FF00;
+    color: black;
+    padding: 15px;
+    0px;
+}
+
+#paintbynumbers {
+    background-color: #1E138E;
+    color: white;
+    padding: 15px;
+    0px;
+}
+
+/*PAINT BY NUMBERS BABY*/
+
+#painter {
+    display: flex;
+    flex-direction: row;
+}
+
+#pictureframe {
+                    display: flex;
+                    flex-direction: row;
+                    width: 869px;
+                    height: 631px;
+                    border-style: solid;
+                    border-color: black;
+                    border-width: 10px;
+                }
+                #column1 {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    width: 50%;
+                }
+                #block1 {
+                    display: flex;
+                    background-color: red;
+                    border-color: black;
+                    border-style: solid;
+                    height: 60%;
+                    width: 100%;
+                }
+                #block2 {
+                    border-color: black;
+                    border-style: solid;
+                    height: 40%;
+                }
+                #column2 {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    width: 10%;
+                }
+                #block3 {
+                    border-color: black;
+                    border-style: solid;
+                    height: 10%;
+                    width: 100%;
+                    background-color: yellow;
+                }
+                #block4 {
+                    border-color: black;
+                    border-style: solid;
+                    height: 50%;
+                    width: 100%;
+                }
+                #block5 {
+                    border-color: black;
+                    border-style: solid;
+                    height: 40%;
+                    width: 100%;
+                    background-color: blue;
+                }
+                #column3 {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    width: 40%;
+                }
+                #section1 {
+                    height: 50%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                }
+                #thicc {
+                    width: 80%;
+                    height: 100%;
+                }
+                #block6 {
+                    border-color: black;
+                    border-style: solid;
+                    width: 100%;
+                    height: 80%;
+                }
+                #block7 {
+                    border-color: black;
+                    border-style: solid;
+                    width: 100%;
+                    height: 20%;
+                    background-color: blue;
+                }
+                #thin {
+                    width: 20%;
+                    height: 100%;
+                }
+                #block8 {
+                    border-color: black;
+                    border-style: solid;
+                    width: 100%;
+                    height: 25%;
+                    background-color: red;
+                }
+                #block9 {
+                    border-color: black;
+                    border-style: solid;
+                    width: 100%;
+                    height: 75%;
+                }
+                #section2 {
+                    height: 50%;
+                    width: 100%;
+                }
+                #block10 {
+                    border-color: black;
+                    border-style: solid;
+                    height: 100%;
+                    background-color: gray;
+                }
+
+                .question {
+                    text-align: left;
+                    align-content: left;
+                    padding-left: 25px;
+                }

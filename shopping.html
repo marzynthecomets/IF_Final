@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+ <meta 
+ charset="UTF-8">
+<title>
+    Shopping Cart
+ </title>
+<meta 
+name="viewport"
+ content="width=device-width,
+  initial-scale=1.0">
+  </head>
+<style>
+img.one {
+  height: 15%;
+  width: 15%;}
+.third { width: 33.33%; float: left; } 
+.half { width: 100%; float: left; } 
+
+</style>
+<body> 
+<div class="menu">
+                <button id="home" onclick="document.location='about.html'">About</button>
+                <button id="musicplayer" onclick="document.location='music.html'">Mondrian & Music</button>
+                <button id="shopping" onclick="document.location='shopping.html'">Shopping</button>
+                <button id="paintbynumbers" onclick="document.location='painter.html'">Paint By Numbers</button>
+            </div>
+<h1>
+   Piet Mondrian Store  
+</h1>
+<div class = "half">
+<table style="width:100%">
+  <tr>
+    <th> </th>
+     <th> </th>
+      <th> </th>
+    
+       </tr>
+<tr>
+ <td style="text-align: center; top-align: middle;" > 
+  <img src="totebag.png" 
+  alt="$18 - photo credit MoMA"  height=200  width=250 > 
+ <p>  <label for= "mycart1"> $18</label>
+   </p>
+      <input id="mycart1" type="number"> <br></br>
+  <button type ="button" onclick="mycart()"> ADD TO CART </button> </td>
+
+<td style="text-align: center; top-align: middle;" > 
+<img height=300 width=300 
+  src="tower.png"
+alt="MoMA De Stijl Tumbling Tower" >
+ <p>
+<label for= "mycart2"> $50</label>
+ </p>
+        <input id="mycart2" type="number"> <br></br>
+     <button type ="button" onclick="mycart()"> ADD TO CART </button>
+ </td>
+ <td style="text-align: center; top-align: middle;"> 
+<img height=300 width=200
+  src="Artsycat.png"
+alt="$16.99 Artsy Cat Calendar">
+ <p>
+<label for= "mycart3"> $16.99</label>
+ </p>
+        <input id="mycart3" type="number"> <br></br>
+      
+       <button type ="button" onclick="mycart()"> ADD TO CART </button>
+ </td>
+
+ </tr>
+<tr>
+<td style="text-align: center; top-align: middle;"> 
+<img height=300 width=200
+  src="miffy.png"
+alt="$ Miffy and Friends Crochet Mondrain Plush Toy  ">
+ <p>
+<label for= "mycart4"> $42.00</label>
+ </p>
+        <input id="mycart4" type="number"> <br></br>
+      
+       <button type ="button" onclick="mycart()"> ADD TO CART </button>
+
+<td style="text-align: center; top-align: middle;"> 
+<img height=300 width=200
+  src="clock.png"
+alt="$89 De Stijil Wall Clock">
+ <p>
+<label for= "mycart5"> $89.00</label>
+ </p>
+        <input id="mycart5" type="number"> <br></br>
+      
+       <button type ="button" onclick="mycart()"> ADD TO CART </button>
+
+<td style="text-align: center; top-align: middle;"> 
+<img height=300 width=200
+  src="boogie.png"
+alt="$5.95 Boogie Magnet">
+ <p>
+<label for= "mycart6"> $5.95</label>
+ </p>
+        <input id="mycart6" type="number"> <br></br>
+      
+       <button type ="button" onclick="mycart()"> ADD TO CART </button>
+
+</tr>
+
+
+</table>
+</div>
+  <p style ="font-size:100px"> &#128722;  </p>
+  <h2 id = "demo"> </h2> 
+
+  <h2> 1. Find 10% of your cart</h2>
+ <input id="input1" type="number"> <br></br>
+     <button type ="button" onclick="checkDiscount()"> Check MY Answer </button>
+<h2 id = "demo3">  </h2>
+  <h3> (Reveal Answer to 10%)</h3>
+     <button type ="button" onclick="mypercent()"> SHOW 10% </button>
+ <h2 id = "demo2">  </h2>
+  <p>
+    <h2> 2. Now, find a  10% discount of your cart. Hint: to do this, find your total - 10%. </h2>
+      Type your answer here to check if it matches.
+    
+      <input id="input3" type="number"> <br></br>
+     <button type ="button" onclick="mychallenge1()"> SHOW ANSWER </button>
+         <h3 id = "demo1"> </h3>
+   </div>
+  </p>
+<div>
+            <p>
+    Haley Horton Copyright &#169;
+     2025
+     </div>
+    </p>
+        <script>
+          function cartTotal() {
+             var x = document.getElementById("mycart1").value;
+                var y = document.getElementById("mycart2").value;
+                 var z = document.getElementById("mycart3").value;
+                 var d = document.getElementById("mycart4").value;
+                 var e = document.getElementById("mycart5").value;
+                 var f = document.getElementById("mycart6").value;
+                let text = "";
+                let total = (x*18 + y*50 + z*16.99+d*42+e*89 +f*5.95);
+                return total;
+          }
+            function mycart() {
+                let total = cartTotal()
+                text = "cart total: $" + total.toFixed(2);
+                document.getElementById("demo").innerHTML=text;
+            }
+        
+           
+            function checkDiscount() {
+              var a = document.getElementById("mycart1").value;
+                var b = document.getElementById("mycart2").value;
+                 var c = document.getElementById("mycart3").value;
+                 var d = document.getElementById("mycart4").value;
+                  var e = document.getElementById("mycart5").value;
+                 var f = document.getElementById("mycart6").value;
+              let g = document.getElementById("input1").value;
+              let input2;
+              if (g == ((a*18 + b*50 + c*16.99 + d*42 + e*89 +f*5.95)*0.10)) {
+                 input2 = "You did it!";
+              } else {
+                 input2 = "If at first you don't succeed, try try again";
+              }
+                document.getElementById("demo3").innerHTML=input2;
+            }
+
+            function mypercent() {
+            var a = document.getElementById("mycart1").value;
+                var b = document.getElementById("mycart2").value;
+                 var c = document.getElementById("mycart3").value;
+                 var d = document.getElementById("mycart4").value;
+                  var e = document.getElementById("mycart5").value;
+                 var f = document.getElementById("mycart6").value;
+                let text1 = "";
+                let total2 = ( (a*18 + b*50 + c*16.99+d*42+e*89 +f*5.95)*0.10) ;
+                text1 =  total2.toFixed(2);
+                document.getElementById("demo2").innerHTML=text1;
+                 }
+
+             function mychallenge1() {
+            var a = document.getElementById("mycart1").value;
+                var b = document.getElementById("mycart2").value;
+                 var c = document.getElementById("mycart3").value;
+                 var d = document.getElementById("mycart4").value;
+                  var e = document.getElementById("mycart5").value;
+                 var f = document.getElementById("mycart6").value;
+                 var h = document.getElementById("input3").value
+                let input3;
+                if (h == ((a*18 + b*50 + c*16.99+d*42+e*89 +f*5.95) - (a*18 + b*50 + c*16.99+d*42+e*89 +f*5.95)*0.10)){
+                input3 = "You did it!";
+                } else {
+                  input3= "If at first you don't succeed, try, try again"
+                }
+                document.getElementById("demo1").innerHTML=input3;
+            }
+            </script>
+             
+            
+
+</body>
+</html>

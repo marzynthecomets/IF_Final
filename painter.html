@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head> 
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width">
+            <link rel="stylesheet" href="style.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <div class="menu">
+                <button id="home" onclick="document.location='about.html'">About</button>
+                <button id="musicplayer" onclick="document.location='music.html'">Mondrian & Music</button>
+                <button id="shopping" onclick="document.location='shopping.html'">Shopping</button>
+                <button id="paintbynumbers" onclick="document.location='painter.html'">Paint By Numbers</button>
+            </div>
+            <h1>Piet Mondrian</h1>
+            <div id="painter">
+            <div id="pictureframe">
+                <div id="column1">
+                    <div id="block1">
+                        <p>Q1</p>
+                    </div>
+                    <div id="block2">
+                        <p>Q2</p>
+                    </div>
+                </div>
+                <div id="column2">
+                    <div id="block3">
+                        <p>Q3</p>
+                    </div>
+                    <div id="block4">
+                        <p>Q4</p>
+                    </div>
+                    <div id="block5">
+                        <p>Q5</p>
+                    </div>
+                </div>
+                <div id="column3">
+                    <div id="section1">
+                        <div id="thicc">
+                            <div id="block6">
+                                <p>Q6</p>
+                            </div>
+                            <div id="block7">
+                                <p>Q7</p>
+                            </div>
+                        </div>
+                        <div id="thin">
+                            <div id="block8">
+                                <p>Q8</p>
+                            </div>
+                            <div id="block9">
+                                <p>Q9</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="section2">
+                        <div id="block10">
+                            <p>Q10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question">
+                <div id="Q1">
+                    <p><b>Q1.</b> What is 1+0.5? Write as a fraction?</p>
+                    <input id="input1" type="text"> <br></br>
+                    <button type ="button" onclick="prob10()"> Check Answer </button> 
+                    <h3 id = "math"> </h3>
+                                <script>
+                                function prob10() {
+                                        var a = document.getElementById("input1").value;
+                                        let math1;
+                                        if (a == "1/5") {
+                                            math1 = "You did it!";
+                                            document.getElementById("block10").style.backgroundColor= "yellow"
+                                        } else {
+                                            math1 = "Aww, shucks!" ;
+                                            document.getElementById("block10").style.backgroundColor= "gray"
+                                        }
+                                        document.getElementById("math").innerHTML= math1;
+                                    } 
+                                </script>
+                </div>
+            </div>
+        </div>
+        </body>
+    </html>
