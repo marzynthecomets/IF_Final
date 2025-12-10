@@ -6,9 +6,14 @@ body {
     margin-right: 5%;
 }
 
+p {
+    margin: 0px;
+}
+
 h1 {
     font-family: "DM Mono", Helvetica, sans-serif;
     color: #D81000;
+    margin: 0px;
 }
 
 h2,
@@ -19,6 +24,62 @@ h6 {
     font-family: "DM Mono", Helvetica, sans-serif;
     color: blue;
     margin: 0px;
+}
+
+/*ABOUT*/
+.sources {
+    text-align: left;
+}
+#main {
+    display: flex;
+    flex-direction: row;
+}
+
+#about {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+}
+
+#bioinfo {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    background-color: #F6FF00;
+    color: black;
+}
+
+#mondrian {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    background-color: blue;
+    color: white;
+    text-align: left;
+    padding: 100px;
+    align-content: center;
+}
+
+#mondrian a {
+    color: white;
+}
+
+.portrait {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.aboutus {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    padding: 20px 20px;
+    width: 300px;
+    text-align: left;
+    margin: 20px;
 }
 
 /*MENU, BON APPETIT*/
@@ -256,4 +317,12 @@ h6 {
 
 #demos {
     text-align: left;
+}
+
+footer {
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+    background-color: yellow;
+    color: black;
 }
